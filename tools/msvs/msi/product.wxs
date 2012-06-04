@@ -5,6 +5,7 @@
   <?define ProductName = "node.js" ?>
   <?define ProductDescription = "Evented I/O for V8 javascript" ?>
   <?define ProductAuthor = "Joyent, Inc. and other Node contributors" ?>
+  <?define ProductAuthorShort = "Joyent" ?>
 
   <?define repoDir="$(var.ProjectDir)..\..\..\" ?>
   <?define sourcedir="$(var.repoDir)\$(var.Configuration)\" ?>
@@ -97,7 +98,7 @@
                   Arguments="/x [ProductCode]"
                   Description="Uninstalls $(var.ProductName)" />
         <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
-        <RegistryValue Root="HKCU" Key="Software\$(var.ProductAuthor)\$(var.ProductName)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>          
+        <RegistryValue Root="HKCU" Key="Software\$(var.ProductAuthorShort)\$(var.ProductName)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>          
       </Component>
     </DirectoryRef>
 
